@@ -1,12 +1,57 @@
-import * as React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, Modal, Button } from 'react-native';
+
+function TimerModal({ visible, onClose }) {
+  const [remainingSeconds, setRemainingSeconds] = useState(61);
+
+  const tick = () => {
+    setRemainingSeconds(prevSeconds => {
+      if (prevSeconds === 1) {
+        onClose();
+        return 0;
+      }
+      return prevSeconds - 1;
+    });
+  };
+
+  React.useEffect(() => {
+    const timerId = setInterval(() => tick(), 1000);
+    return () => clearInterval(timerId);
+  }, []);
+
+  React.useEffect(() => {
+    if (!visible) {
+      setRemainingSeconds(61);
+    }
+  }, [visible]);
+
+  return (
+    <Modal visible={visible} animationType="fade">
+      <View style={styles.timerContainer}>
+        <Text style={styles.timerText}>{remainingSeconds}</Text>
+        <Button title="Close" onPress={onClose} />
+      </View>
+    </Modal>
+  );
+}
 
 function AboutScreen() {
+  const [isTimerVisible, setIsTimerVisible] = useState(false);
+
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>
-         1 minute Mindfulness
+      <Text
+        style={styles.title}
+        onPress={() => setIsTimerVisible(true)}
+      >
+        1 minute Mindfulness ⏱️
       </Text>
+
+      <TimerModal
+        visible={isTimerVisible}
+        onClose={() => setIsTimerVisible(false)}
+      />
+
       <Text style={styles.subtitle}>
          Mindfulness can help you reduce stress, improve your mood, and enhance your well-being. You can practice mindfulness anytime and anywhere, even for just a minute.
       </Text>
@@ -51,6 +96,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#031D44',
     marginBottom: 10,
+    textDecorationLine: 'underline'
   },
   subtitle: {
     fontSize: 16,
@@ -82,6 +128,17 @@ const styles = StyleSheet.create({
     fontSize: 18,
     lineHeight: 30,
     flex: 1,
+  },
+  timerContainer: {
+    flex: 1,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  timerText: {
+    fontSize: 72,
+    fontWeight: 'bold',
+    color: '#FFFFFF',
   },
 });
 
