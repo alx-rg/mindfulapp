@@ -48,7 +48,7 @@ function App() {
           <Tab.Screen name="Home"
             component={HomeScreen}
             options={{
-              title: "Am I Mindful",
+              title: "Log It",
               headerStyle: {
               backgroundColor: '#70a288'
               },
@@ -62,7 +62,7 @@ function App() {
           <Tab.Screen name="List"
             component={ListScreen}
             options={{
-              title: "Mindful-Logs",
+              title: "Mindful Streak",
               headerStyle: {
               backgroundColor: '#70a288'
               },
@@ -76,7 +76,7 @@ function App() {
           <Tab.Screen name="About"
             component={AboutScreen}
             options={{
-              title: "What is Mindful",
+              title: "How To Be",
               headerStyle: {
               backgroundColor: '#70a288'
               },

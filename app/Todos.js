@@ -9,8 +9,8 @@ export const todosSlice = createSlice({
 	initialState,
 	reducers: {
 		addTodo: (state, action) => {
-			const { name, body, mind, breath } = action.payload
-			state.todos.unshift({ name, body, mind, breath })
+			const { name, body, mind, breath, focus } = action.payload
+			state.todos.unshift({ name, body, mind, breath, focus })
 		}
 	}
 })

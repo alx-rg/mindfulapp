@@ -11,9 +11,10 @@ export default function ListTodos() {
           return (
             <View>
               <Text>{item.name}</Text>
-              <Text>Breath: {item.breath}</Text>
-              <Text>Body: {item.body}</Text>
-              <Text>Mind: {item.mind}</Text>
+              <Text>Awareness: {item.body}</Text>
+              <Text>Clarity: {item.mind}</Text>
+              <Text>Focus: {item.focus}</Text>
+              <Text>Calmness: {item.breath}</Text>
             </View>
           );
 				}}

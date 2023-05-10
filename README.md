@@ -1,1 +1,1 @@
-\*\*\* Simple Question Tracking APP using ReactNative and Redux
+\*\*\* Simple Mindfulness Tracking APP using ReactNative and Redux

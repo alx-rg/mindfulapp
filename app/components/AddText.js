@@ -9,11 +9,12 @@ export default function AddTodo() {
   const [name, setName] = useState("Hello")
   const [body, setBody] = useState(null)
   const [mind, setMind] = useState(null)
+  const [focus, setFocus] = useState(null)
   const [breath, setBreath] = useState(null)
   const dispatch = useDispatch()
 
   const handleAddTodo = () => {
-    dispatch(addTodo({ name, body, mind, breath }))
+    dispatch(addTodo({ name, body, mind, breath, focus }))
   }
 
   const commonTabStyle = {
@@ -37,26 +38,43 @@ export default function AddTodo() {
 
   return (
 		<View style={styles.container}>
+      <Text>What is your state of mind right now?</Text>
+      <Text>Please write a few words to describe your mental state.</Text>
 			<TextInput
 				style={styles.textInput}
 				value={name}
 				onChangeText={setName}
 			/>
-      <Text>Body</Text>
+      <Text>Awareness</Text>
+      <Text>How aware are you of your thoughts and feelings?</Text>
+      <Text>Scale of 1 (not at all) to 5 (very aware)</Text>
       <SegmentedControlTab
         values={['1', '2', '3', '4', '5']}
         selectedIndex={body}
         onTabPress={setBody}
         tabsContainerStyle={commonTabStyle}
       />
-      <Text>Mind</Text>
+      <Text>Clarity</Text>
+      <Text>How clear is your mind?</Text>
+      <Text>Scale of 1 (very foggy) to 5 (very clear)</Text>
       <SegmentedControlTab
         values={['1', '2', '3', '4', '5']}
         selectedIndex={mind}
         onTabPress={setMind}
         tabsContainerStyle={commonTabStyle}
       />
-      <Text>Breath</Text>
+      <Text>Focus</Text>
+      <Text>How focused are you on the present moment?</Text>
+      <Text>Scale of 1 (very distracted) to 5 (very focused)</Text>
+      <SegmentedControlTab
+        values={['1', '2', '3', '4', '5']}
+        selectedIndex={focus}
+        onTabPress={setFocus}
+        tabsContainerStyle={commonTabStyle}
+      />
+      <Text>Calmness</Text>
+      <Text>How calm are you feeling?</Text>
+      <Text>Scale of 1 (very anxious) to 5 (very calm)</Text>
       <SegmentedControlTab
         values={['1', '2', '3', '4', '5']}
         selectedIndex={breath}
