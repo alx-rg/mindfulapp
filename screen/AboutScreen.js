@@ -12,23 +12,23 @@ function AboutScreen() {
       </Text>
       <View style={styles.stepsContainer}>
         <View style={{flexDirection: 'row'}}>
-          <Text style={[styles.stepNumber, {backgroundColor: '#CCD5AE'}]}>1.</Text>
+          <Text style={[styles.stepNumber, {backgroundColor: '#CCD5AE', width: 45}]}>1.</Text>
           <Text style={[styles.stepText, {color: '#031D44'}]}>Find a comfortable position and close your eyes or lower your gaze.</Text>
         </View>
         <View style={{flexDirection: 'row'}}>
-          <Text style={[styles.stepNumber, {backgroundColor: '#E9EDC9'}]}>2.</Text>
+          <Text style={[styles.stepNumber, {backgroundColor: '#E9EDC9', width: 45}]}>2.</Text>
           <Text style={[styles.stepText, {color: '#031D44'}]}>Take a few deep breaths and notice how your body feels.</Text>
         </View>
         <View style={{flexDirection: 'row'}}>
-          <Text style={[styles.stepNumber, {backgroundColor: '#FEFAE0'}]}>3.</Text>
+          <Text style={[styles.stepNumber, {backgroundColor: '#FEFAE0', width: 45}]}>3.</Text>
           <Text style={[styles.stepText, {color: '#031D44'}]}>Bring your attention to one thing, such as your breath, a sound, or a sensation.</Text>
         </View>
         <View style={{flexDirection: 'row'}}>
-          <Text style={[styles.stepNumber, {backgroundColor: '#FAEDCD'}]}>4.</Text>
+          <Text style={[styles.stepNumber, {backgroundColor: '#FAEDCD', width: 45}]}>4.</Text>
           <Text style={[styles.stepText, {color: '#031D44'}]}>If your mind wanders, gently bring it back to your focus without judging yourself.</Text>
         </View>
         <View style={{flexDirection: 'row'}}>
-          <Text style={[styles.stepNumber, {backgroundColor: '#D4A373'}]}>5.</Text>
+          <Text style={[styles.stepNumber, {backgroundColor: '#D4A373', width: 45}]}>5.</Text>
           <Text style={[styles.stepText, {color: '#031D44'}]}>When the minute is up, open your eyes and notice how you feel.</Text>
         </View>
       </View>
