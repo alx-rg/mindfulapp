@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Provider } from 'react-redux';
 import HomeScreen from './screen/HomeScreen';
@@ -17,40 +16,41 @@ function App() {
   return (
     <Provider store={store}>
       <NavigationContainer>
-        <Tab.Navigator
-          screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused, color, size }) => {
-              let iconName;
-              if (route.name === 'Home') {
-                iconName = focused ? 'heart-circle' : 'heart-circle-outline';
-              } else if (route.name === 'List') {
-                iconName = focused ? 'bar-chart' : 'bar-chart-outline';
-              } else if (route.name === 'About') {
-                iconName = focused ? 'leaf' : 'leaf-outline';
-              }
-              return <Ionicons name={iconName} size={size} color={color} />;
-            },
-            tabBarActiveTintColor: '#fff', // Active/focussed color
-            tabBarInactiveTintColor: '#04395e', // Inactive color
-            tabBarStyle: { backgroundColor: 'black' },
-            tabBarInactiveBackgroundColor: '#dab785',
-            tabBarActiveBackgroundColor: '#70a288',
-            headerStyle: {
-              backgroundColor: 'black',
-              },
-              headerTintColor: '#fff',
-              headerTitleStyle: {
-              fontWeight: 'bold',
-              }
-            })
-          }
-        >
+      <Tab.Navigator
+  screenOptions={({ route }) => ({
+    tabBarIcon: ({ focused, color, size }) => {
+      let iconName;
+      if (route.name === 'Home') {
+        iconName = focused ? 'heart-circle' : 'heart-circle-outline';
+      } else if (route.name === 'List') {
+        iconName = focused ? 'bar-chart' : 'bar-chart-outline';
+      } else if (route.name === 'About') {
+        iconName = focused ? 'leaf' : 'leaf-outline';
+      }
+      return <Ionicons name={iconName} size={size} color={color} />;
+    },
+    tabBarActiveTintColor: '#031D44', // Active/focused color
+    tabBarInactiveTintColor: '#6b705c', // Inactive color
+    tabBarStyle: { backgroundColor: '#FEFAE0' },
+    tabBarInactiveBackgroundColor: '#FAEDCD',
+    tabBarActiveBackgroundColor: '#FEFAE0',
+    headerStyle: {
+      backgroundColor: '#FEFAE0',
+    },
+    headerTintColor: '#031D44',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+      fontSize: 24,
+    },
+  })}
+>
+
           <Tab.Screen name="Home"
             component={HomeScreen}
             options={{
               title: "Mindful Me",
               headerStyle: {
-              backgroundColor: '#70a288'
+              backgroundColor: '#CCD5AE'
               },
               headerTintColor: '#fff',
               headerTitleStyle: {
@@ -64,7 +64,7 @@ function App() {
             options={{
               title: "Mindful Streak",
               headerStyle: {
-              backgroundColor: '#70a288'
+              backgroundColor: '#CCD5AE'
               },
               headerTintColor: '#fff',
               headerTitleStyle: {
@@ -78,7 +78,7 @@ function App() {
             options={{
               title: "Mindful How To",
               headerStyle: {
-              backgroundColor: '#70a288'
+              backgroundColor: '#CCD5AE'
               },
               headerTintColor: '#fff',
               headerTitleStyle: {

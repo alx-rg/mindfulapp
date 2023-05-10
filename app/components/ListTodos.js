@@ -25,21 +25,21 @@ export default function ListTodos() {
               <View style={{flexDirection: 'row', width: '100%', backgroundColor: '#FEFAE0', padding: 10}}>
                 <View style={{flexDirection: 'column', width: '50%'}}>
                   <Text style={{color: '#031D44', fontWeight: 'bold'}}>Awareness</Text>
-                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.body}</Text>
+                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.body + 1}</Text>
                 </View>
                 <View style={{flexDirection: 'column'}}>
                   <Text style={{color: '#031D44', fontWeight: 'bold'}}>Clarity</Text>
-                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.mind}</Text>
+                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.mind + 1}</Text>
                 </View>
               </View>
               <View style={{flexDirection: 'row', width: '100%', backgroundColor: '#FAEDCD', padding: 10}}>
                 <View style={{flexDirection: 'column', width: '50%'}}>
                   <Text style={{color: '#031D44', fontWeight: 'bold'}}>Focus</Text>
-                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.focus}</Text>
+                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.focus + 1}</Text>
                 </View>
                 <View style={{flexDirection: 'column'}}>
                   <Text style={{color: '#031D44', fontWeight: 'bold'}}>Calmness</Text>
-                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.breath}</Text>
+                  <Text style={{color: '#D4A373', fontSize: 20, fontWeight: 'bold'}}>{item.breath + 1}</Text>
                 </View>
               </View>
             </View>
