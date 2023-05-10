@@ -49,60 +49,60 @@ export default function AddTodo() {
 
   return (
 		<View style={styles.container}>
-          <View style={styles.questionContainer}>
-      <Text style={styles.heading}>What is your state of mind right now?</Text>
-      <TextInput
-        style={styles.textInput}
-        value={name}
-        onChangeText={setName}
-        placeholder='Words describing your mental state atm...'
-        placeholderTextColor='#9E9E9E'
-      />
-    </View>
-    <View style={styles.questionContainer}>
-      <Text style={styles.heading}>Awareness</Text>
-      <Text style={styles.subheading}>How aware are you of your thoughts and feelings?</Text>
-      <Text style={styles.subheading}>Scale of 1 (not at all) to 5 (very aware)</Text>
-      <SegmentedControlTab
-        values={['1', '2', '3', '4', '5']}
-        selectedIndex={body}
-        onTabPress={setBody}
-        tabsContainerStyle={commonTabStyle}
-      />
-    </View>
-    <View style={styles.questionContainer}>
-      <Text style={styles.heading}>Clarity</Text>
-      <Text style={styles.subheading}>How clear is your mind?</Text>
-      <Text style={styles.subheading}>Scale of 1 (very foggy) to 5 (very clear)</Text>
-      <SegmentedControlTab
-        values={['1', '2', '3', '4', '5']}
-        selectedIndex={mind}
-        onTabPress={setMind}
-        tabsContainerStyle={commonTabStyle}
-      />
-    </View>
-    <View style={styles.questionContainer}>
-      <Text style={styles.heading}>Focus</Text>
-      <Text style={styles.subheading}>How focused are you on the present moment?</Text>
-      <Text style={styles.subheading}>Scale of 1 (very distracted) to 5 (very focused)</Text>
-      <SegmentedControlTab
-        values={['1', '2', '3', '4', '5']}
-        selectedIndex={focus}
-        onTabPress={setFocus}
-        tabsContainerStyle={commonTabStyle}
-      />
-    </View>
-    <View style={styles.questionContainer}>
-      <Text style={styles.heading}>Calmness</Text>
-      <Text style={styles.subheading}>How calm are you feeling?</Text>
-      <Text style={styles.subheading}>Scale of 1 (very anxious) to 5 (very calm)</Text>
-      <SegmentedControlTab
-        values={['1', '2', '3', '4', '5']}
-        selectedIndex={breath}
-        onTabPress={setBreath}
-        tabsContainerStyle={commonTabStyle}
-      />
-    </View>
+      <View style={styles.questionContainer}>
+        <Text style={styles.heading}>What is your state of mind right now?</Text>
+        <TextInput
+          style={styles.textInput}
+          value={name}
+          onChangeText={setName}
+          placeholder='Words describing your mental state atm...'
+          placeholderTextColor='#9E9E9E'
+        />
+      </View>
+      <View style={styles.questionContainer}>
+        <Text style={styles.heading}>Awareness</Text>
+        <Text style={styles.subheading}>How aware are you of your thoughts and feelings?</Text>
+        <Text style={styles.subheading}>Scale of 1 (not at all) to 5 (very aware)</Text>
+        <SegmentedControlTab
+          values={['1', '2', '3', '4', '5']}
+          selectedIndex={body}
+          onTabPress={setBody}
+          tabsContainerStyle={commonTabStyle}
+        />
+      </View>
+      <View style={styles.questionContainer}>
+        <Text style={styles.heading}>Clarity</Text>
+        <Text style={styles.subheading}>How clear is your mind?</Text>
+        <Text style={styles.subheading}>Scale of 1 (very foggy) to 5 (very clear)</Text>
+        <SegmentedControlTab
+          values={['1', '2', '3', '4', '5']}
+          selectedIndex={mind}
+          onTabPress={setMind}
+          tabsContainerStyle={commonTabStyle}
+        />
+      </View>
+      <View style={styles.questionContainer}>
+        <Text style={styles.heading}>Focus</Text>
+        <Text style={styles.subheading}>How focused are you on the present moment?</Text>
+        <Text style={styles.subheading}>Scale of 1 (very distracted) to 5 (very focused)</Text>
+        <SegmentedControlTab
+          values={['1', '2', '3', '4', '5']}
+          selectedIndex={focus}
+          onTabPress={setFocus}
+          tabsContainerStyle={commonTabStyle}
+        />
+      </View>
+      <View style={styles.questionContainer}>
+        <Text style={styles.heading}>Calmness</Text>
+        <Text style={styles.subheading}>How calm are you feeling?</Text>
+        <Text style={styles.subheading}>Scale of 1 (very anxious) to 5 (very calm)</Text>
+        <SegmentedControlTab
+          values={['1', '2', '3', '4', '5']}
+          selectedIndex={breath}
+          onTabPress={setBreath}
+          tabsContainerStyle={commonTabStyle}
+        />
+      </View>
 
       <TouchableOpacity style={styles.addButton} onPress={handleAddTodo}>
         <Text style={styles.addButtonText}>Save</Text>

@@ -32,7 +32,7 @@ function AboutScreen() {
           <Text style={[styles.stepText, {color: '#031D44'}]}>When the minute is up, open your eyes and notice how you feel.</Text>
         </View>
       </View>
-        <Text style={[styles.subtitle, {marginTop: 10, color: '#031D44'}]}>You can repeat this exercise as often as you like throughout the day.</Text>
+      <Text style={[styles.subtitle, {marginTop: 10, color: '#031D44'}]}>You can repeat this exercise as often as you like throughout the day.</Text>
     </View>
   );
 }

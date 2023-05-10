@@ -1,8 +1,8 @@
 import * as React from 'react';
 import AddTodo from '../app/components/AddText';
-import { View, Text, Button } from 'react-native';
+import { View } from 'react-native';
 
-function HomeScreen( {navigation}) {
+function HomeScreen() {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <AddTodo />
